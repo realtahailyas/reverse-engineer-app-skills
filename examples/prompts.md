@@ -5,9 +5,9 @@ Each one is a full prompt for Claude Code with the Replica skills installed.
 ## Reverse engineer an app (start here)
 
 ```
-/replica-recon Reverse engineer chess.com: list every screen, user flow,
+/replica-recon Reverse engineer <app>: list every screen, user flow,
 component, the inferred data model and a feature matrix in replica/.
-Scope: play a game online, puzzles, profile and ratings. Web first.
+Scope: the core loop only. Web first.
 ```
 
 ```

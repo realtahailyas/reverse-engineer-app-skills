@@ -10,7 +10,7 @@
 [![Python](https://img.shields.io/badge/tools-stdlib%20python-3776ab)](#built-in-tools)
 [![Clean room](https://img.shields.io/badge/approach-clean%20room-success)](#the-rules)
 
-[Install](#install) · [Quick start](#quick-start) · [The 11 skills](#the-11-skills) · [Example: chess.com](#example-reverse-engineering-chesscom) · [Prompts](examples/prompts.md)
+[Install](#install) · [Quick start](#quick-start) · [The 11 skills](#the-11-skills) · [Example](#example-reverse-engineering-calendly) · [Prompts](examples/prompts.md)
 
 </div>
 
@@ -70,7 +70,7 @@ Skills in `~/.claude/skills/` are available in **every** project. Restart Claude
 Open Claude Code in an empty folder and type:
 
 ```
-/replica-recon Reverse engineer chess.com: screens, flows, components,
+/replica-recon Reverse engineer Calendly: screens, flows, components,
 data model and feature matrix. Then plan it with /replica-architect.
 ```
 
@@ -111,21 +111,21 @@ python3 skills/replica-diff/imgdiff.py original.png clone.png --out diff.png
 python3 skills/replica-design/contrast.py replica/design/tokens.json
 ```
 
-## Example: reverse engineering chess.com
+## Example: reverse engineering Calendly
 
 ```
-/replica-recon Reverse engineer chess.com. Scope: play online, puzzles,
-profile and ratings. Web first.
+/replica-recon Reverse engineer Calendly. Scope: event types, availability,
+the public booking page and confirmations. Web first.
 ```
 
 What you get in `replica/recon.md`:
 
 - **Sources table**: help center, pricing page, changelog, store listing, walkthroughs, each with a URL
-- **Screens**: `S01 home`, `S02 play lobby`, `S03 live board`, `S04 game review`, `S05 puzzles`, `S06 profile`…
-- **Flows**: `F01 quick-match a 10 min game: S02 → S03 → S04`, with click counts and edge cases (disconnect, timeout, resign)
-- **Data model**: `User`, `Game`, `Move`, `Rating`, `Puzzle`, `PuzzleAttempt`, each with evidence and confidence
-- **Feature matrix**: must / should / could, plus `skip` rows for what you can't clone (their user base, licensed content)
-- **Size**: realtime, matchmaking and rating maths flagged as the hard parts
+- **Screens**: `S01 dashboard`, `S02 event types`, `S03 availability`, `S07 booking page`, `S08 pick a time`, `S10 confirmed`…
+- **Flows**: `F01 guest books a meeting: S07 → S08 → S09 → S10`, with click counts and edge cases (slot taken, time zones)
+- **Data model**: `User`, `EventType`, `Availability`, `Booking`, each with evidence and confidence
+- **Feature matrix**: must / should / could, plus `skip` rows for what you can't clone (their partner network)
+- **Size**: calendar sync, time zones and double-booking flagged as the hard parts
 
 Then `/replica-architect`, `/replica-design`, `/replica-build`, and so on. More in [examples/prompts.md](examples/prompts.md).
 
