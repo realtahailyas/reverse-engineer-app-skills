@@ -1,0 +1,14 @@
+{
+  "name": "reverse-engineer-app-skills",
+  "owner": {
+    "name": "Taha Ilyas",
+    "url": "https://github.com/realtahailyas"
+  },
+  "plugins": [
+    {
+      "name": "replica",
+      "source": "./",
+      "description": "Reverse engineer any app and rebuild it as your own. 11 Claude Code skills from recon to deploy."
+    }
+  ]
+}

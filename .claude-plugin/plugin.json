@@ -1,0 +1,20 @@
+{
+  "name": "replica",
+  "version": "1.0.0",
+  "description": "Reverse engineer any app and rebuild it as your own: recon, architecture, design system, build, backend, tests, parity diff, review mining, rebrand, launch and deploy. 11 Claude Code skills.",
+  "author": {
+    "name": "Taha Ilyas",
+    "url": "https://github.com/realtahailyas"
+  },
+  "homepage": "https://github.com/realtahailyas/reverse-engineer-app-skills",
+  "repository": "https://github.com/realtahailyas/reverse-engineer-app-skills",
+  "keywords": [
+    "reverse-engineering",
+    "app-clone",
+    "claude-code",
+    "claude-skills",
+    "agent-skills",
+    "saas-clone",
+    "product-teardown"
+  ]
+}
