@@ -1,0 +1,55 @@
+name: Bug report
+description: A skill or tool did something wrong
+labels: [bug]
+body:
+  - type: dropdown
+    id: skill
+    attributes:
+      label: Skill or tool
+      options:
+        - replica-recon
+        - replica-architect
+        - replica-design
+        - replica-build
+        - replica-backend
+        - replica-test
+        - replica-diff
+        - replica-entrepreneur
+        - replica-brand
+        - replica-launch
+        - replica-deploy
+        - installer (install.sh / install.ps1)
+        - plugin / marketplace manifest
+        - other
+    validations:
+      required: true
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened
+      description: What you ran (prompt or command), what you expected, and what you got instead.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Install via ...
+        2. Run `/replica-recon ...`
+        3. See ...
+    validations:
+      required: true
+  - type: textarea
+    id: output
+    attributes:
+      label: Relevant output or error
+      description: Paste logs or tracebacks. Remove any secrets or private data first.
+      render: text
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      placeholder: "OS, Claude Code version, Python version, install method"
+    validations:
+      required: true

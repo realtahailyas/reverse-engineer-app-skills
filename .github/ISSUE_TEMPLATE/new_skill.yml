@@ -1,0 +1,46 @@
+name: New skill proposal
+description: Propose a new skill for the Replica pack
+labels: [new-skill]
+body:
+  - type: input
+    id: name
+    attributes:
+      label: Skill name
+      placeholder: replica-example
+    validations:
+      required: true
+  - type: textarea
+    id: job
+    attributes:
+      label: What job does it do?
+      description: One clear job. Where does it fit in the recon -> deploy pipeline?
+    validations:
+      required: true
+  - type: textarea
+    id: triggers
+    attributes:
+      label: Trigger phrases
+      description: What would a user say that should load this skill?
+      placeholder: '"plan the pricing page", "price my clone"'
+    validations:
+      required: true
+  - type: textarea
+    id: io
+    attributes:
+      label: Inputs and outputs
+      description: Which `replica/` files it reads, and what it writes.
+    validations:
+      required: true
+  - type: textarea
+    id: tools
+    attributes:
+      label: Tools it needs
+      description: Any standard-library Python tool it would ship with.
+  - type: checkboxes
+    id: rules
+    attributes:
+      label: Clean-room check
+      options:
+        - label: The skill only uses public sources, the user's own account and official APIs, and writes everything fresh.
+          required: true
+        - label: I am willing to open the pull request for it.

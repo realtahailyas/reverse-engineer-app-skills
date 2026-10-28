@@ -1,0 +1,29 @@
+name: Feature request
+description: Suggest an improvement to an existing skill or tool
+labels: [enhancement]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What are you trying to do, and what gets in the way today?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed change
+      description: Which skill or tool, and what should it do differently?
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+  - type: checkboxes
+    id: rules
+    attributes:
+      label: Clean-room check
+      options:
+        - label: This works from public sources, the user's own account or official APIs only (no scraping behind logins, decompiling or copying assets).
+          required: true
