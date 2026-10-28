@@ -8,7 +8,8 @@
     {
       "name": "replica",
       "source": "./",
-      "description": "Reverse engineer any app and rebuild it as your own. 11 Claude Code skills from recon to deploy."
+      "description": "Reverse engineer any app and rebuild it as your own. 11 Claude Code skills from recon to deploy.",
+      "license": "MIT"
     }
   ]
 }
