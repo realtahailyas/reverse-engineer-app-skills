@@ -9,6 +9,8 @@
 [![Skills](https://img.shields.io/badge/skills-11-blue)](#the-11-skills)
 [![Python](https://img.shields.io/badge/tools-stdlib%20python-3776ab)](#built-in-tools)
 [![Clean room](https://img.shields.io/badge/approach-clean%20room-success)](#the-rules)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![Validate](https://github.com/realtahailyas/reverse-engineer-app-skills/actions/workflows/validate.yml/badge.svg)](https://github.com/realtahailyas/reverse-engineer-app-skills/actions/workflows/validate.yml)
 
 [Install](#install) · [Quick start](#quick-start) · [The 11 skills](#the-11-skills) · [Example](#example-reverse-engineering-calendly) · [Prompts](examples/prompts.md)
 
@@ -48,6 +50,8 @@ curl -fsSL https://raw.githubusercontent.com/realtahailyas/reverse-engineer-app-
 ```powershell
 irm https://raw.githubusercontent.com/realtahailyas/reverse-engineer-app-skills/main/install.ps1 | iex
 ```
+
+Piping a script into a shell runs it straight away. To check it first, open [`install.sh`](install.sh) or [`install.ps1`](install.ps1), or download it and read it before running.
 
 **Option 3: Claude Code plugin marketplace**
 
@@ -158,6 +162,7 @@ skills/
   replica-launch/       SKILL.md, listing.py, listing.example.json
   replica-deploy/       SKILL.md, preflight.md
 .claude-plugin/         plugin + marketplace manifests
+.github/                CI (frontmatter + tool checks), issue and PR templates
 examples/prompts.md     copy-paste prompts
 ```
 
@@ -168,6 +173,14 @@ examples/prompts.md     copy-paste prompts
 **Can it clone a mobile app?** Yes. Recon works from the store listing, screenshots and your own device; the build defaults to Expo (React Native).
 
 **Is reverse engineering an app legal?** Studying how an app works from public sources and rebuilding the features yourself is how most software competition works. Copying code, assets, trademarks or breaking terms is not. The skills stay on the right side of that line, but they are not legal advice.
+
+## Contributing
+
+Issues and pull requests are welcome. Read [CONTRIBUTING.md](CONTRIBUTING.md) and the [Code of Conduct](CODE_OF_CONDUCT.md) first; report security problems as described in [SECURITY.md](SECURITY.md). Release notes are in [CHANGELOG.md](CHANGELOG.md).
+
+## License
+
+[MIT](LICENSE) © 2026 Taha Ilyas
 
 ---
 
